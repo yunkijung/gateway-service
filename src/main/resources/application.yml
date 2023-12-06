@@ -70,6 +70,7 @@ spring:
           filters:
             #            - AddRequestHeader=property-request, property-request-header2
             #            - AddResponseHeader=property-response, property-response-header2
+            - RewritePath=/property-service/(?<segment>.*), /$\{segment}
             - name: CustomFilter
             - name: LoggingFilter
               args:
